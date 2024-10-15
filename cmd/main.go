@@ -36,6 +36,9 @@ import (
 
 	ncv1beta1 "github.com/waveywaves/nextcloud-operator/api/v1beta1"
 	"github.com/waveywaves/nextcloud-operator/internal/controller"
+
+	fluxhelmv2beta1 "github.com/fluxcd/helm-controller/api/v2beta1"
+	fluxsourcev1beta2 "github.com/fluxcd/source-controller/api/v1beta2"
 	//+kubebuilder:scaffold:imports
 )
 
@@ -48,6 +51,10 @@ func init() {
 	utilruntime.Must(clientgoscheme.AddToScheme(scheme))
 
 	utilruntime.Must(ncv1beta1.AddToScheme(scheme))
+
+	utilruntime.Must(fluxhelmv2beta1.AddToScheme(scheme))
+
+	utilruntime.Must(fluxsourcev1beta2.AddToScheme(scheme))
 	//+kubebuilder:scaffold:scheme
 }
 
