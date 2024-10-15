@@ -1,0 +1,4 @@
+## Append samples of your project ##
+resources:
+- nc_v1beta1_nextcloud.yaml
+#+kubebuilder:scaffold:manifestskustomizesamples
