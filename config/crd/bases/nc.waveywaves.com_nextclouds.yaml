@@ -46,6 +46,11 @@ spec:
             type: object
           status:
             description: NextcloudStatus defines the observed state of Nextcloud
+            properties:
+              helmReleaseName:
+                type: string
+            required:
+            - helmReleaseName
             type: object
         type: object
     served: true
